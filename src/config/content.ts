@@ -1,7 +1,7 @@
-import shoppayImg from '@/app/assets/images/shoppay.jpg';
-import pennytotsImg from '@/app/assets/images/pennytots.png';
+import shoppayImg from '@/app/assets/images/quikaar.png';
+import pennytotsImg from '@/app/assets/images/pennytot.png';
 import willFrontendImg from '@/app/assets/images/willFrontend.png';
-import willAdminImg from '@/app/assets/images/willAdmin.png';
+import willAdminImg from '@/app/assets/images/wilAdm.png';
 import greatAnosikeImg from '@/app/assets/images/great.png';
 
 export interface TextSegment {
