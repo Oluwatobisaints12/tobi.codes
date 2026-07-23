@@ -269,10 +269,10 @@ const SystemMonitorWidget = () => {
   );
 };
 
-// Reusable Figma Ambient Blue Glow Spot (#1F8BDA, opacity: 50%, blur: 200px, w:450, h:450, minW:432, minH:450)
+// Reusable Figma Ambient Blue Glow Spot (#1F8BDA, sharp vibrant ambient glow)
 const BlueGlowSpot = ({ position }: { position: string }) => (
   <div 
-    className={`w-[450px] h-[450px] min-w-[432px] min-h-[450px] rounded-full bg-[#1F8BDA] opacity-50 blur-[200px] pointer-events-none -z-10 absolute ${position}`} 
+    className={`w-[480px] h-[480px] min-w-[432px] min-h-[450px] rounded-full bg-[#1F8BDA] opacity-75 blur-[100px] sm:blur-[120px] pointer-events-none -z-10 absolute ${position}`} 
   />
 );
 
