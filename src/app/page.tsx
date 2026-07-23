@@ -9,10 +9,10 @@ import LocalTime from '@/components/LocalTime';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 import portraitImg from '@/app/assets/images/portrait.jpg';
-import tagBrace from '@/app/assets/images/3d-tags/tag-brace.png';
-import tagHash from '@/app/assets/images/3d-tags/tag-hash.png';
-import tagGt from '@/app/assets/images/3d-tags/tag-gt.png';
-import tagSlash from '@/app/assets/images/3d-tags/tag-slash.png';
+import tagBrace from '@/app/assets/images/3d-tags/dev.svg';
+import tagHash from '@/app/assets/images/3d-tags/hashtag.svg';
+import tagGt from '@/app/assets/images/3d-tags/element.svg';
+import tagSlash from '@/app/assets/images/3d-tags/tag.svg';
 
 // Framer motion variants
 const fadeInUp = {
