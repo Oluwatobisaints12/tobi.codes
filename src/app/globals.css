@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
+@theme {
+  --font-ampher: var(--font-ampher), cursive, sans-serif;
+  --font-object-sans: var(--font-object-sans), system-ui, sans-serif;
+  --font-neue-machina: var(--font-neue-machina), system-ui, sans-serif;
+
+  --font-sans: var(--font-object-sans), system-ui, -apple-system, sans-serif;
+  --font-script: var(--font-ampher), cursive;
+  --font-mono: var(--font-neue-machina), monospace;
+  
+  --color-accent-blue: #2196F3;
+  --color-window-bg: #0F0F0F;
+  --color-window-border: rgba(255, 255, 255, 0.08);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0F0F0F;
+  --foreground: #F5F5F5;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #42A5F5;
+}
+
+/* Blue glow utility matching Figma (#1F8BDA, opacity 50%, blur 200px) */
+.bg-blue-glow {
+  background-color: rgba(31, 139, 218, 0.5);
+  filter: blur(200px);
+  -webkit-filter: blur(200px);
+}
+
+.accent-glow {
+  background: radial-gradient(circle 500px at 50% 50%, rgba(31, 139, 218, 0.35), transparent 80%);
+}
+
+.accent-glow-hero {
+  background: radial-gradient(circle 700px at 50% 40%, rgba(31, 139, 218, 0.45), transparent 70%);
+}
+
+/* Glassmorphism subtle overlay */
+.window-glass {
+  backdrop-filter: blur(12px);
+  background-color: rgba(15, 15, 15, 0.75);
+}
+
+
