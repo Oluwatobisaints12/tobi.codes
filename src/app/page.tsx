@@ -632,17 +632,7 @@ export default function Page() {
                           </h3>
                         </div>
                         
-                        {/* Tech tags */}
-                        <div className="flex flex-wrap gap-2 mt-4">
-                          {project.tags.map((tag, tIdx) => (
-                            <span 
-                              key={tIdx} 
-                              className="font-neue-machina text-[9px] uppercase tracking-wider px-3 py-1 rounded-full border border-white/[0.08] bg-white/[0.01] text-white/50"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
+                       
                       </div>
 
                       {/* Right: Image Preview */}

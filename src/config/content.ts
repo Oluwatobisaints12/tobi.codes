@@ -13,7 +13,6 @@ export interface TextSegment {
 export interface Project {
   title: string;
   number: string;
-  tags: string[];
   image: string;
   year: string;
   url: string;
@@ -109,7 +108,7 @@ export const PORTFOLIO_CONTENT: PortfolioConfig = {
     {
       title: "Quikaar",
       number: "02",
-      tags: ["html", "javascript", "css"],
+     
       image: shoppayImg.src,
       year: "2025",
       url: "https://quikaar.com/"
@@ -117,7 +116,7 @@ export const PORTFOLIO_CONTENT: PortfolioConfig = {
     {
       title: "Pennytots",
       number: "04",
-      tags: ["html", "javascript", "css"],
+     
       image: pennytotsImg.src,
       year: "2024",
       url: "https://app.pennytots.com/"
@@ -125,25 +124,25 @@ export const PORTFOLIO_CONTENT: PortfolioConfig = {
     {
       title: "Will it Survive",
       number: "01",
-      tags: ["html", "javascript", "css"],
+     
       image: willFrontendImg.src,
-      year: "2025",
+      year: "2026",
       url: "https://will-it-survive.pennytots.com"
     },
     {
       title: "Will it Survive Admin",
       number: "01",
-      tags: ["html", "javascript", "css"],
+     
       image: willAdminImg.src,
-      year: "2025",
+      year: "2026",
       url: "https://will-it-survive-admin.pennytots.com"
     },
     {
       title: "Great Anosike",
       number: "03",
-      tags: ["html", "javascript", "css"],
+     
       image: greatAnosikeImg.src,
-      year: "2024",
+      year: "2025",
       url: "https://www.greatanosike.com"
     }
   ]
