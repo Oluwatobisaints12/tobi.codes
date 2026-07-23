@@ -360,13 +360,13 @@ export default function Page() {
             </h2>
           </div>
 
-          {/* 1. Desktop Layout (Absolute overlapping OS windows) */}
-          <div className="hidden lg:block relative w-full h-[620px] mb-12">
+          {/* 1. Desktop Layout (OS windows cluster) */}
+          <div className="hidden lg:block relative w-full h-[600px] mb-12">
             
             {/* About-Me bio card */}
-            <div className="absolute top-0 left-0 w-[72%] z-10 hover:z-30 transition-transform duration-300">
+            <div className="absolute top-0 left-0 w-[68%] z-10 hover:z-30 transition-transform duration-300">
               <Window title="About-Me">
-                <div className="space-y-4 font-neue-machina font-normal text-[16px] text-[#A0A0A0] leading-relaxed select-text">
+                <div className="space-y-4 font-neue-machina font-normal text-[15px] text-[#A0A0A0] leading-relaxed select-text">
                   {PORTFOLIO_CONTENT.bioParagraphs.map((para, i) => (
                     <p key={i}>
                       {para.map((seg, idx) => {
@@ -396,17 +396,17 @@ export default function Page() {
               </Window>
             </div>
 
-            {/* Portrait Card (overlaps About-Me) */}
-            <div className="absolute top-[80px] right-0 w-[30%] z-20 hover:z-30 transition-transform duration-300">
-              <Window title="Portrait" className="!p-0">
-                <div className="w-full relative">
+            {/* Portrait Card (Top right, constrained height) */}
+            <div className="absolute top-0 right-0 w-[29%] z-20 hover:z-30 transition-transform duration-300">
+              <Window title="Portrait" className="!p-0 overflow-hidden">
+                <div className="w-full h-[250px] relative">
                   <PortraitImage />
                 </div>
               </Window>
             </div>
 
             {/* Where-I-Work Card */}
-            <div className="absolute top-[330px] left-0 w-[36%] z-10 hover:z-30 transition-transform duration-300">
+            <div className="absolute top-[310px] left-0 w-[33%] z-20 hover:z-30 transition-transform duration-300">
               <Window title="Where-I-Work" className="h-full">
                 <ul className="space-y-3 font-neue-machina font-normal text-[14px] text-white leading-normal">
                   <li className="flex items-start gap-2">
@@ -422,7 +422,7 @@ export default function Page() {
             </div>
 
             {/* Hobbies Card */}
-            <div className="absolute top-[400px] left-[39%] w-[27%] z-10 hover:z-30 transition-transform duration-300">
+            <div className="absolute top-[310px] left-[35%] w-[32%] z-20 hover:z-30 transition-transform duration-300">
               <Window title="Hobbies" className="h-full">
                 <ol className="space-y-2.5 font-neue-machina font-normal text-[14px] text-white leading-normal">
                   {PORTFOLIO_CONTENT.hobbies.map((hobby, i) => (
@@ -437,7 +437,7 @@ export default function Page() {
             </div>
 
             {/* Me-Online Card */}
-            <div className="absolute top-[330px] right-0 w-[30%] z-10 hover:z-30 transition-transform duration-300">
+            <div className="absolute top-[310px] right-0 w-[31%] z-20 hover:z-30 transition-transform duration-300">
               <Window title="Me-Online" className="h-full">
                 <ul className="space-y-3 font-neue-machina font-normal text-[14px] text-white">
                   {PORTFOLIO_CONTENT.socials.map((link, i) => (
