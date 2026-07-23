@@ -9,6 +9,10 @@ import LocalTime from '@/components/LocalTime';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 import portraitImg from '@/app/assets/images/portrait.jpg';
+import tagBrace from '@/app/assets/images/3d-tags/tag-brace.png';
+import tagHash from '@/app/assets/images/3d-tags/tag-hash.png';
+import tagGt from '@/app/assets/images/3d-tags/tag-gt.png';
+import tagSlash from '@/app/assets/images/3d-tags/tag-slash.png';
 
 // Framer motion variants
 const fadeInUp = {
@@ -290,13 +294,35 @@ export default function Page() {
           <BlueGlowSpot position="top-[5%] left-[-220px] lg:left-[-150px]" />
           <BlueGlowSpot position="top-[10%] right-[-220px] lg:right-[-150px]" />
 
-          {/* Blurred Background Silhouette Graphics */}
-          <div className="absolute left-[5%] top-[18%] text-[26rem] font-bold text-white/[0.012] blur-[2px] select-none pointer-events-none font-serif leading-none">
-            T
-          </div>
-          <div className="absolute right-[5%] top-[12%] text-[26rem] font-bold text-white/[0.012] blur-[2px] select-none pointer-events-none font-sans leading-none">
-            #
-          </div>
+          {/* 3D Code Tag Floating Assets from Figma Design */}
+          <motion.img
+            src={tagBrace.src}
+            alt="3D Curly Brace"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            className="absolute left-[8%] sm:left-[14%] top-[14%] sm:top-[18%] w-16 sm:w-24 md:w-32 opacity-90 select-none pointer-events-none z-0"
+          />
+          <motion.img
+            src={tagHash.src}
+            alt="3D Hash Tag"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+            className="absolute right-[8%] sm:right-[16%] top-[10%] sm:top-[14%] w-16 sm:w-24 md:w-32 opacity-90 select-none pointer-events-none z-0"
+          />
+          <motion.img
+            src={tagGt.src}
+            alt="3D Greater Than"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
+            className="absolute right-[12%] sm:right-[18%] bottom-[20%] sm:bottom-[24%] w-14 sm:w-20 md:w-28 opacity-90 select-none pointer-events-none z-0"
+          />
+          <motion.img
+            src={tagSlash.src}
+            alt="3D Slash Tag"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut" }}
+            className="absolute left-[12%] sm:left-[18%] bottom-[22%] sm:bottom-[26%] w-12 sm:w-16 md:w-24 opacity-90 select-none pointer-events-none z-0"
+          />
 
           {/* Centered Hero Heading Content */}
           <div className="flex-1 flex flex-col items-center justify-center px-6 py-20 text-center z-10 max-w-4xl mx-auto">
