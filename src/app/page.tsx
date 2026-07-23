@@ -337,7 +337,7 @@ export default function Page() {
               <span className="font-ampher font-normal text-[47.44px] md:text-[58px] lg:text-[68px] xl:text-[76px] text-[#2196F3] inline-block px-1">
                 creative
               </span>{' '}
-              <span className="font-object-sans font-normal text-[47.44px] md:text-[58px] lg:text-[68px] xl:text-[76px] text-[#2196F3]">
+              <span className="font-object-sans font-normal text-[47.44px] md:text-[58px] lg:text-[68px] xl:text-[76px] text-white">
                 developer
               </span>
             </h1>
