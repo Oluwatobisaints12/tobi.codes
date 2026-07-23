@@ -571,57 +571,67 @@ export default function Page() {
             </h2>
           </div>
 
-          {/* Stack of Project Cards */}
+          {/* Stack of Project Cards (Draggable) */}
           <div className="flex flex-col gap-6">
             {PORTFOLIO_CONTENT.projects.map((project, index) => (
-              <a 
-                href={project.url}
-                target="_blank" 
-                rel="noopener noreferrer"
+              <motion.div
                 key={index}
-                className="block group"
+                drag
+                dragMomentum={false}
+                dragElastic={0.05}
+                whileDrag={{ scale: 1.02, zIndex: 50 }}
+                whileHover={{ y: -4, scale: 1.005 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+                className="touch-none cursor-grab active:cursor-grabbing"
               >
-                <div className="relative rounded-lg border border-white/[0.08] bg-[#0F0F0F]/60 backdrop-blur-sm p-6 hover:translate-y-[-4px] hover:border-[#2196F3]/30 hover:shadow-2xl hover:shadow-black/60 transition-all duration-300 select-none">
-                  <div className="flex flex-col md:flex-row gap-6 items-stretch justify-between">
-                    
-                    {/* Left: Text detail */}
-                    <div className="flex-1 flex flex-col justify-between py-1 select-text">
-                      <div>
-                        {/* Number Indicator with quotes */}
-                        <div className="font-mono text-xs text-white/30 mb-2 select-none">
-                          &ldquo;{project.number}&rdquo;
-                        </div>
-                        {/* Project Title */}
-                        <h3 className="font-object-sans font-normal text-[26px] md:text-[32px] text-white group-hover:text-[#2196F3] transition-colors duration-300 mb-4">
-                          {project.title}
-                        </h3>
-                      </div>
+                <a 
+                  href={project.url}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block group"
+                >
+                  <div className="relative rounded-lg border border-white/[0.08] bg-[#0F0F0F]/60 backdrop-blur-sm p-6 hover:border-[#2196F3]/30 hover:shadow-2xl hover:shadow-black/60 transition-all duration-300 select-none">
+                    <div className="flex flex-col md:flex-row gap-6 items-stretch justify-between">
                       
-                      {/* Tech tags */}
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {project.tags.map((tag, tIdx) => (
-                          <span 
-                            key={tIdx} 
-                            className="font-neue-machina text-[9px] uppercase tracking-wider px-3 py-1 rounded-full border border-white/[0.08] bg-white/[0.01] text-white/50"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                      {/* Left: Text detail */}
+                      <div className="flex-1 flex flex-col justify-between py-1 select-text">
+                        <div>
+                          {/* Number Indicator with quotes */}
+                          <div className="font-mono text-xs text-white/30 mb-2 select-none">
+                            &ldquo;{project.number}&rdquo;
+                          </div>
+                          {/* Project Title */}
+                          <h3 className="font-object-sans font-normal text-[26px] md:text-[32px] text-white group-hover:text-[#2196F3] transition-colors duration-300 mb-4">
+                            {project.title}
+                          </h3>
+                        </div>
+                        
+                        {/* Tech tags */}
+                        <div className="flex flex-wrap gap-2 mt-4">
+                          {project.tags.map((tag, tIdx) => (
+                            <span 
+                              key={tIdx} 
+                              className="font-neue-machina text-[9px] uppercase tracking-wider px-3 py-1 rounded-full border border-white/[0.08] bg-white/[0.01] text-white/50"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Right: Image Preview */}
-                    <div className="w-full md:w-[320px] aspect-video md:aspect-[4/3] shrink-0 relative overflow-hidden rounded-md border border-white/[0.08] bg-black/40">
-                      <ProjectImage src={project.image} alt={project.title} title={project.title} />
-                      {/* Year label bottom right */}
-                      <div className="absolute bottom-2.5 right-2.5 font-neue-machina text-[9px] bg-[#0F0F0F]/80 backdrop-blur-md px-2.5 py-1 rounded border border-white/[0.08] text-white select-none font-medium">
-                        {project.year}
+                      {/* Right: Image Preview */}
+                      <div className="w-full md:w-[320px] aspect-video md:aspect-[4/3] shrink-0 relative overflow-hidden rounded-md border border-white/[0.08] bg-black/40">
+                        <ProjectImage src={project.image} alt={project.title} title={project.title} />
+                        {/* Year label bottom right */}
+                        <div className="absolute bottom-2.5 right-2.5 font-neue-machina text-[9px] bg-[#0F0F0F]/80 backdrop-blur-md px-2.5 py-1 rounded border border-white/[0.08] text-white select-none font-medium">
+                          {project.year}
+                        </div>
                       </div>
-                    </div>
 
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </motion.div>
             ))}
           </div>
         </section>
