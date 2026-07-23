@@ -331,18 +331,18 @@ export default function Page() {
             </span>
             
             <h1 className="leading-tight select-none">
-              <span className="font-object-sans font-normal text-[32px] sm:text-[40px] md:text-[47.44px] text-white">
-                Hi, I&apos;m Tobi, a{' '}
+              <span className="font-object-sans font-normal text-[47.44px] md:text-[58px] lg:text-[68px] xl:text-[76px] text-white">
+                Hi, I&apos;m T.Code, a{' '}
               </span>
-              <span className="font-ampher font-normal text-[36px] sm:text-[44px] md:text-[47.44px] text-[#2196F3] inline-block px-1">
+              <span className="font-ampher font-normal text-[47.44px] md:text-[58px] lg:text-[68px] xl:text-[76px] text-[#2196F3] inline-block px-1">
                 creative
               </span>{' '}
-              <span className="font-object-sans font-normal text-[32px] sm:text-[40px] md:text-[47.44px] text-white">
+              <span className="font-object-sans font-normal text-[47.44px] md:text-[58px] lg:text-[68px] xl:text-[76px] text-[#2196F3]">
                 developer
               </span>
             </h1>
 
-            <p className="max-w-xl font-neue-machina font-normal text-[16px] text-[#9D9D9D] leading-relaxed mt-6 md:mt-8 select-text">
+            <p className="max-w-xl font-neue-machina font-normal text-[16px] md:text-[18px] lg:text-[20px] text-[#9D9D9D] leading-relaxed mt-6 md:mt-8 select-text">
               {PORTFOLIO_CONTENT.subtext}
             </p>
           </div>
@@ -381,7 +381,7 @@ export default function Page() {
             <span className="font-mono text-[9px] uppercase tracking-widest text-white/40 block mb-2">
               ABOUT ME
             </span>
-            <h2 className="font-object-sans font-normal text-[32px] md:text-[44px] text-white leading-tight">
+            <h2 className="font-object-sans font-normal text-[44px] md:text-[54px] lg:text-[62px] text-white leading-tight">
               Your <span className="font-ampher text-[#2196F3]">creative</span> web developer
             </h2>
           </div>
@@ -589,7 +589,7 @@ export default function Page() {
             <span className="font-mono text-[9px] uppercase tracking-widest text-white/40 block mb-2">
               WORK
             </span>
-            <h2 className="font-object-sans font-normal text-[32px] md:text-[44px] text-white">
+            <h2 className="font-object-sans font-normal text-[44px] md:text-[54px] lg:text-[62px] text-white">
               Projects{' '}
               <span className="font-ampher text-[#2196F3] font-normal lowercase inline-block px-1 select-none">
                 highlight
@@ -627,7 +627,7 @@ export default function Page() {
                             &ldquo;{project.number}&rdquo;
                           </div>
                           {/* Project Title */}
-                          <h3 className="font-object-sans font-normal text-[26px] md:text-[32px] text-white group-hover:text-[#2196F3] transition-colors duration-300 mb-4">
+                          <h3 className="font-object-sans font-normal text-[32px] md:text-[38px] lg:text-[44px] text-white group-hover:text-[#2196F3] transition-colors duration-300 mb-4">
                             {project.title}
                           </h3>
                         </div>
@@ -718,7 +718,7 @@ export default function Page() {
 
               {/* Text & Button */}
               <div className="flex-1 text-center md:text-left select-text">
-                <h3 className="font-object-sans font-normal text-[28px] sm:text-[44px] text-white leading-tight mb-5">
+                <h3 className="font-object-sans font-normal text-[44px] sm:text-[52px] md:text-[60px] text-white leading-tight mb-5">
                   Let&apos;s work together on your next project
                 </h3>
                 <a 
